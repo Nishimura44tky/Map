@@ -27,27 +27,28 @@ struct ContentView: View {
         // 垂直にレイアウト
         VStack {
          
-            // テキストフィールド生成（文字入力）
-            TextField("キーワードを入力してください",
+//            // テキストフィールド生成（文字入力）
+//            TextField("キーワードを入力してください",
+//
+//                      text:  $inputText , onCommit: { //状態変数の指定するときは先頭に$つける
+//
+//                // 入力が完了したので検索キーワードに設定する
+//                dispSearchkey = inputText
+//
+//                // 検索キーワードをデバックエリアに出力する
+//                print("入力したキーワード：" + dispSearchkey )
+//            })
+//
+//            // 余白を追加
+//            .padding()
+//
+//            // マップを表示(MapViewを指定)
+//            MapView(searchKey: dispSearchkey)
             
-                      text:  $inputText , onCommit: { //状態変数の指定するときは先頭に$つける
-                // 入力が完了したので検索キーワードに設定する
-                dispSearchkey = inputText
-                
-                // 検索キーワードをデバックエリアに出力する
-                print("入力したキーワード：" + dispSearchkey )
-            })
             
-            // 余白を追加
-            .padding()
-            
-            // マップを表示(MapViewを指定)
-            MapView(searchKey: dispSearchkey)
-            
-            
-//            Map(coordinateRegion: $manager.region,
-//                showsUserLocation: true, // マップ上にユーザーの場所を表示するオプションをBool値で指定
-//                userTrackingMode: $trackingMode) // マップがユーザーの位置情報更新にどのように応答するかを決定.edgesIgnoringSafeArea(.bottom)
+            Map(coordinateRegion: $manager.region,
+                showsUserLocation: true, // マップ上にユーザーの場所を表示するオプションをBool値で指定
+                userTrackingMode: $trackingMode) // マップがユーザーの位置情報更新にどのように応答するかを決定.edgesIgnoringSafeArea(.bottom)
         }
     }
 }
